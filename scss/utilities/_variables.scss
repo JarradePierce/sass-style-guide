@@ -1,0 +1,57 @@
+//default color
+$default-color: #777;
+// headline color
+$headline-color: #58e1c1;
+// link color
+$link-color: #51ddfc;
+
+// COLUMN THEME COLORS
+
+$col-themes:(
+  '1': #927bc1,
+  '2': #fd7856,
+  '3':  #deb2ee,
+  '4': #7ee6fd,
+  '5': #88d9a0,
+  '6': #4da2bb,
+  '7': #ec9fa3,
+  '8': #fd9f85,
+  '9': #e4757a,
+  '10': #63cc82,
+  '11': #51ddfc,
+  '12': #80e8d1,
+);
+
+@each $theme, $color in $col-themes{
+  .col-#{$theme}{
+    color: $color;
+  }
+}
+
+
+//******
+// MEDIA QUERY BREAKS
+//******
+
+$breakpoints:('sm': 768px);
+
+//********
+// FONTS
+//********
+
+$main-sans-serif: 'Lato', sans-serif;
+
+//headline font styles
+$headline-font-weight: 300;
+
+// link font styles
+$link-font-weight: 700;
+
+//blockquote font styles
+$bq-font-size: 1.5em;
+$bq-font-weight: 300;
+$bq-font-style: italic;
+
+//********
+// GRID VARIABLES
+//********

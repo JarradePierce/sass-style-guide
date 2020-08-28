@@ -1,0 +1,19 @@
+// FONT
+
+*{
+  font-family: $main-sans-serif;
+}
+
+.headline-secondary{
+  font-weight: $headline-font-weight;
+}
+
+.link{
+  font-weight: $link-font-weight;
+}
+
+.blockquote{
+  font-size: $bq-font-size;
+  font-weight: $bq-font-weight;
+  font-style: $bq-font-style;
+}

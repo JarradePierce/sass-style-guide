@@ -1,0 +1,4 @@
+.row{
+  @include flexy($disp: flex, $dir: column);
+  padding: 1em 10px;
+}

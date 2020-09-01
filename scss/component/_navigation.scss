@@ -1,0 +1,27 @@
+.nav{
+  padding-left: 0;
+  @include flexy($disp: flex, $dir: column, $basis: 100%);
+
+  @media(min-width: $breakpoint-sm){
+    @include flexy($dir: row, $just: flex-end);
+    align-items: center;
+  }
+}
+
+.nav-link{
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px 0;
+  display: block;
+  width: 100%;
+  @include transition(background-color .2s ease-in-out, color .2s ease-in-out);
+
+  @media(min-width: $breakpoint-sm){
+    flex-basis: 100%;
+  }
+}
+
+.nav-link:hover{
+  color: $white;
+  background-color: $link-bg-color;
+}

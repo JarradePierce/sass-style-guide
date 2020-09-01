@@ -1,10 +1,25 @@
-//default color
+//******
+//COLORS
+//******
+
+//default colors
 $default-color: #777;
+$white: #fff;
 // headline color
 $headline-color: #58e1c1;
+$headline-secondary-color: #777;
 // link color
 $link-color: #51ddfc;
-
+$link-bg-color: #58e1c1;
+//error
+$error-color: #e4757a;
+$info-color: #927bc1;
+$success-color: #63cc82;
+$warning-bg-color: #fd7856;
+//INPUT COLORS
+$input-border-color: #58e1c1;
+//img frame colors
+$img-frame-color: #ccc;
 // COLUMN THEME COLORS
 
 $col-themes:(
@@ -22,18 +37,12 @@ $col-themes:(
   '12': #80e8d1,
 );
 
-@each $theme, $color in $col-themes{
-  .col-#{$theme}{
-    color: $color;
-  }
-}
-
 
 //******
 // MEDIA QUERY BREAKS
 //******
 
-$breakpoints:('sm': 768px);
+ $breakpoint-sm: 768px;
 
 //********
 // FONTS
@@ -51,7 +60,10 @@ $link-font-weight: 700;
 $bq-font-size: 1.5em;
 $bq-font-weight: 300;
 $bq-font-style: italic;
+$bq-border-color: #58e1c1;
 
 //********
 // GRID VARIABLES
 //********
+$func-max-width: 1000px;
+$gutter: 10px;

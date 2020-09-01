@@ -2,10 +2,29 @@
   $disp: flex,
   $dir: null,
   $wrap: null,
-  $just: null
+  $just: null,
+  $basis: null,
 ){
   display: $disp;
   flex-direction: $dir;
   flex-wrap: $wrap;
   justify-content: $just;
+  flex-basis: $basis;
+}
+
+@mixin transition($trans...){
+  transition: $trans;
+}
+
+@mixin center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  &::after{
+    @content;
+  }
+}
+
+@mixin mq($break-sm: 768px){
+  min-width: $break-sm;
 }

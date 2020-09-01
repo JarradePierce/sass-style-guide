@@ -1,0 +1,46 @@
+.logo{
+  margin-left: initial;
+  margin-right: initial;
+}
+
+.btn{
+  margin-top: 15px;
+  width: 100%;
+  color: $white;
+  border: none;
+  padding: 10px 0;
+  text-transform: uppercase;
+  border-radius: 5px;
+
+  @media(min-width: $breakpoint-sm){
+    padding: 10px 30px;
+  }
+}
+
+.btn + .btn{
+  margin-left: 10px;
+}
+
+.default {
+  background-color: $default-color;
+}
+
+.error {
+  background-color: $error-color;
+}
+
+.info {
+  background-color: $info-color;
+}
+
+.success {
+  background-color: $success-color;
+}
+
+.warning {
+  background-color: $warning-bg-color;
+}
+
+.success{
+  background-color: $success-color;
+}

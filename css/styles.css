@@ -5,12 +5,9 @@
 }
 @media (min-width: 768px) {
   .row {
+    display: flex;
     flex-direction: row;
   }
-}
-
-.theme {
-  margin: 10px;
 }
 
 .theme.col-1 {
@@ -124,7 +121,6 @@
 
 [class^=col] {
   margin-top: 10px;
-  flex-basis: 100%;
   min-height: 25px;
   padding: 10px;
   border-radius: 5px;
@@ -138,10 +134,11 @@
   }
 }
 
-[class^=col] + [class^=col] {
-  margin-left: 10px;
+@media (min-width: 768px) {
+  [class^=col] + [class^=col] {
+    margin-left: 10px;
+  }
 }
-
 .card {
   flex-basis: 100%;
 }
@@ -173,11 +170,6 @@
   overflow: hidden;
 }
 
-.logo {
-  margin-left: initial;
-  margin-right: initial;
-}
-
 .btn {
   margin-top: 15px;
   width: 100%;
@@ -190,11 +182,9 @@
 @media (min-width: 768px) {
   .btn {
     padding: 10px 30px;
+    margin-left: 5px;
+    margin-right: 5px;
   }
-}
-
-.btn + .btn {
-  margin-left: 10px;
 }
 
 .default {
@@ -221,6 +211,11 @@
   background-color: #63cc82;
 }
 
+.logo {
+  margin-left: initial;
+  margin-right: initial;
+}
+
 .nav {
   padding-left: 0;
   display: flex;
@@ -242,6 +237,8 @@
   padding: 10px 0;
   display: block;
   width: 100%;
+  color: #777;
+  text-decoration: none;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 @media (min-width: 768px) {

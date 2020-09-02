@@ -2,12 +2,8 @@
   @include flexy($disp: flex, $dir: column);
   padding: 1em 10px;
   @media(min-width: $breakpoint-sm){
-    flex-direction: row;
+    @include flexy($dir: row);
   }
-}
-
-.theme{
-  margin: $gutter;
 }
 
 @each $theme, $color in $col-themes{
@@ -76,7 +72,6 @@
 
 [class^=col]{
   margin-top: 10px;
-  flex-basis: 100%;
   min-height: 25px;
   padding: 10px;
   border-radius: 5px;
@@ -88,8 +83,10 @@
   }
 }
 
-[class^=col] + [class^=col]{
-  margin-left: 10px;
+@media(min-width: $breakpoint-sm){
+  [class^=col] + [class^=col]{
+    margin-left: $gutter;
+  }
 }
 
 .card{
